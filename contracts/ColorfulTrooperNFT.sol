@@ -122,7 +122,8 @@ contract ColorfulTrooperNFT is ERC721URIStorage {
         //define params of NFT
         NFTDescriptor.TokenURIParams memory params = NFTDescriptor
             .TokenURIParams({
-                name: string(
+                name: "Colorful Trooper",
+                description: string(
                     abi.encodePacked(
                         "A ",
                         randomBgPalette,
@@ -131,7 +132,6 @@ contract ColorfulTrooperNFT is ERC721URIStorage {
                         " Trooper"
                     )
                 ),
-                description: "A unique NFT Colorful Tropper",
                 bgColor: randomBgPalette,
                 imageColor: randomImagePalette
             });
