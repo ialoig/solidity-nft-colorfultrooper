@@ -1,18 +1,25 @@
 <p align="center">
-  <img width="400" height="100" src="./assets/img/logo/trooper.svg">
+  <img width="200" height="200" src="./assets/img/logo/trooper.svg">
 </p>
 <h1 align="center"> NFT Colorful Trooper </h1>
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+<h2> Mint your own NFT collection</h2>
 
-Try running some of the following tasks:
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+It create a unique Colorful Trooper NFT based on randomly generated colors selected from an handcrafted beautiful palette.
+Everything will be happening on-chain. This means all the NFT data will live on the blockchain itself.
+Colors will be attached to the SVG image as Background and Image colors.
+
+## 🚀 Getting started
+
+1.  **To run the contract locally**
+
+    ```shell
+    $ npx hardhat run scripts/run.js
+    ```
+
+2.  **To deploy the contract on Etherium Rinkeby network**
+
+    ```shell
+    $ npx hardhat run scripts/deploy.js --network rinkeby
+    ```
