@@ -18,7 +18,7 @@ Colors will be attached to the SVG image as Background and Image colors.
     $ npx hardhat run scripts/run.js
     ```
 
-2.  **To deploy the contract on Etherium Rinkeby network**
+2.  **To deploy the contract on Ethereum Rinkeby network**
 
     ```shell
     $ npx hardhat run scripts/deploy.js --network rinkeby

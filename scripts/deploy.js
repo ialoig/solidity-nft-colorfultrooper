@@ -5,7 +5,7 @@ const main = async () => {
     const libraryFactory = await hre.ethers.getContractFactory("NFTDescriptor")
     const libraryContract = await libraryFactory.deploy()
     await libraryContract.deployed()
-    console.log("Library deployed: ", libraryContract.address)
+    console.log("Library deployed to:", libraryContract.address)
 
     //deploy contract
     const nftContractFactory = await hre.ethers.getContractFactory("ColorfulTrooperNFT", {
@@ -15,7 +15,7 @@ const main = async () => {
     })
     const nftContract = await nftContractFactory.deploy()
     await nftContract.deployed()
-    console.log("Contract deployed: ", nftContract.address)
+    console.log("Contract deployed to:", nftContract.address)
 
     //call the function to mint an NFT
     let tx = await nftContract.mintNFT();

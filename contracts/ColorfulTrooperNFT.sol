@@ -7,11 +7,6 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "./libraries/NFTDescriptor.sol";
 
-//https://blog.simondlr.com/posts/flavours-of-on-chain-svg-nfts-on-ethereum
-//https://etherscan.io/address/0x0cfdb3ba1694c2bb2cfacb0339ad7b1ae5932b63#code#F7#L48
-//https://github.com/simondlr/neolastics/blob/master/packages/hardhat/contracts/ERC721.sol#L172
-//https://github.com/Untitled-Frontier/tlatc/blob/master/packages/hardhat/contracts/AnchorCertificates.sol#L178
-
 contract ColorfulTrooperNFT is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
@@ -71,6 +66,8 @@ contract ColorfulTrooperNFT is ERC721URIStorage {
         "#A8FF3E",
         "#F77FEE"
     ];
+
+    event NewColorfulTrooperMinted(address sender, uint256 tokenId);
 
     constructor() ERC721("Colorful Trooper", "TROOP") {
         console.log("This is the Colorful Trooper NFT Contract!");
@@ -153,5 +150,8 @@ contract ColorfulTrooperNFT is ERC721URIStorage {
 
         //increment the counter
         _tokenIds.increment();
+
+        //emit event
+        emit NewColorfulTrooperMinted(msg.sender, newItemId);
     }
 }
