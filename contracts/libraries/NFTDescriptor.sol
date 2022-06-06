@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 
+/// @title A library used to construct ERC721 token URIs and SVG image
+
 pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
